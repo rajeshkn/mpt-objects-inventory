@@ -31,10 +31,10 @@ class Config:
         # Token name: mpt-objects-inventory-token-{date}
         self.CONFLUENCE_API_TOKEN = data['CONFLUENCE_API_TOKEN']
     
-        self.CONFLUENCE_API_USERNAME = 'service-user.mpt@softwareone.com'
+        self.CONFLUENCE_API_USERNAME = data['CONFLUENCE_API_USERNAME']
 
-        self.MISSING_FIGMA_PAGE_PLACEHOLDER = 'https://www.figma.com/design/rHxTpbi2gpbZ4dmVlyeY2S/Object-Diagrams?node-id=14494-411&t=9t14B4asXC7wJTrH-0'
+        self.MISSING_FIGMA_PAGE_PLACEHOLDER = data['MISSING_FIGMA_PAGE_PLACEHOLDER']
 
-        self.CONFLUENCE_BASE_URL = 'https://softwareone.atlassian.net/wiki'
+        self.CONFLUENCE_BASE_URL = data['CONFLUENCE_BASE_URL']
 
         self.CONFLUENCE_AUTH = HTTPBasicAuth(self.CONFLUENCE_API_USERNAME, self.CONFLUENCE_API_TOKEN)
