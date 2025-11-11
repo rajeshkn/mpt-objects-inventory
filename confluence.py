@@ -145,19 +145,21 @@ class Confluence:
             return data
 
 
-    def download_current_confluence_page(self, confluence_page_url):
-
+    def get_confluence_page_contents(self, confluence_page_url):
         page_id = self.get_confluence_page_id_from_url(confluence_page_url)
-
         request_url = f'{cfg.CONFLUENCE_BASE_URL}/rest/api/content/{page_id}?expand=body.storage,version'
-        print(f"Downloading Confluence page via API: {request_url}")
         resp = requests.get(
             request_url, 
             headers={"Accept": "application/json"}, 
             auth=cfg.CONFLUENCE_AUTH
-            )
+        )
         resp.raise_for_status()
-        data = resp.json()
+        return resp.json()
+
+
+    def download_current_confluence_page(self, confluence_page_url):        
+        page_id = self.get_confluence_page_id_from_url(confluence_page_url)
+        data = self.get_confluence_page_contents(confluence_page_url)
         page_title = data['title']
         page_title_for_file = re.sub(r'[^a-zA-Z0-9_\-]', '-', page_title)
         html_content = data['body']['storage']['value']
@@ -171,7 +173,32 @@ class Confluence:
         return page_title
 
 
-    def update_confluence_page(self, page_url, new_content):
+    def _remove_nondata_attributes(self, html):
+        soup = BeautifulSoup(html, "html.parser")
+        for tag in soup.find_all(True):  # True = all tags
+            if 'ri:version-at-save' in tag.attrs:
+                del tag.attrs['ri:version-at-save']
+        return str(soup)
+
+
+    def update_confluence_page_contents(self, page_url, new_content):
+
+        old_content = self.get_confluence_page_contents(page_url)
+
+        # Get the old page content (HTML, as string)
+        old_html = self._remove_nondata_attributes(old_content['body']['storage']['value'])
+        new_html = self._remove_nondata_attributes(new_content)
+
+        # Normalize both HTMLs for comparison using BeautifulSoup's prettify (formatting)
+        soup_old = BeautifulSoup(old_html, "html.parser")
+        prettified_old = soup_old.prettify()
+        soup_new = BeautifulSoup(new_html, "html.parser")
+        prettified_new = soup_new.prettify()
+
+        # If the formatted content is identical, do not proceed with update
+        if prettified_old.strip() == prettified_new.strip():
+            print("NO CHANGES DETECTED! Skipping update.")
+            return
 
         page_id = self.get_confluence_page_id_from_url(page_url)
 
@@ -204,5 +231,3 @@ class Confluence:
 
         # also just to make sure all these pages look alike, we make it full width
         self.make_page_full_width(page_url)
-
-        return put_response.json()

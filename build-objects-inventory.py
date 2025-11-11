@@ -218,7 +218,6 @@ def update_confluence_page(rendered_files, object_schema):
             '{{desktop-infocard-table-section}}': desktop_infocard_view_table_section,
             '{{mobile-list-table-section}}': mobile_list_view_table_section,
             '{{mobile-details-table-section}}': mobile_details_view_table_section,
-            '{{last-updated}}': get_timestamp(),
         }
     )
 
@@ -227,7 +226,7 @@ def update_confluence_page(rendered_files, object_schema):
 
     print()
     print(f"Updating Confluence page: {page_id}...")
-    confluence.update_confluence_page(confluence_page_url, page_template)
+    confluence.update_confluence_page_contents(confluence_page_url, page_template)
 
     print(f"Successfully updated Confluence page: {page_id}")
     print()
@@ -295,7 +294,6 @@ def write_summary_page(object_schemas):
     summary_page_template = read_file("confluence-templates/summary-page.html")
     summary_page_template = populate_template(summary_page_template, {
         '{{summary-page-rows}}': '\n'.join(object_rows),
-        '{{last-updated}}': get_timestamp(),
     })
 
     with open(f"{cfg.TEMP_RENDER_FOLDER}/summary-page.html", "w", encoding="utf-8") as f:
@@ -305,7 +303,7 @@ def write_summary_page(object_schemas):
     
     print()
     print(f"Updating Confluence summary page...")
-    confluence.update_confluence_page(cfg.CONFLUENCE_SUMMARY_PAGE_URL, summary_page_template)
+    confluence.update_confluence_page_contents(cfg.CONFLUENCE_SUMMARY_PAGE_URL, summary_page_template)
 
     print(f"Successfully updated Confluence summary page")
     print()
