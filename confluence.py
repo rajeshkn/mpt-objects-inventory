@@ -1,13 +1,16 @@
 #!/usr/bin/env python
 
-from config import Config
 import re
 import requests
 import json
-from bs4 import BeautifulSoup
 import os
+import concurrent.futures
+from bs4 import BeautifulSoup
+
+from config import Config
 
 cfg = Config()
+
 
 
 class Confluence:
@@ -46,7 +49,6 @@ class Confluence:
             auth=cfg.CONFLUENCE_AUTH
         )
         properties_response.raise_for_status()
-        print(f"Current page properties: {properties_response.text}")
 
         properties = properties_response.json()
         full_width_property = None
@@ -57,7 +59,6 @@ class Confluence:
                 break
 
         if full_width_property:
-            print(f'deleting existing property {property_key}...')
             # delete if existing
             response = requests.delete(
                 f"{properties_base_url}/{full_width_property['id']}",
@@ -67,7 +68,6 @@ class Confluence:
                 auth=cfg.CONFLUENCE_AUTH
             )
             response.raise_for_status()
-            print(f"Deleted existing property {property_key}: {response.text}")
 
         # Now force create the property with the correct value
         response = requests.post(
@@ -145,6 +145,11 @@ class Confluence:
             return data
 
 
+    def get_confluence_page_title(self, confluence_page_url):
+        data = self.get_confluence_page_contents(confluence_page_url)
+        return data['title']
+
+
     def get_confluence_page_contents(self, confluence_page_url):
         page_id = self.get_confluence_page_id_from_url(confluence_page_url)
         request_url = f'{cfg.CONFLUENCE_BASE_URL}/rest/api/content/{page_id}?expand=body.storage,version'
@@ -181,9 +186,32 @@ class Confluence:
         return str(soup)
 
 
+    def remove_all_page_attachments(self, page_url):
+        print(f"Removing all attachments from page: {page_url} ...")
+        page_id = self.get_confluence_page_id_from_url(page_url)
+        request_url = f'{cfg.CONFLUENCE_BASE_URL}/rest/api/content/{page_id}/child/attachment'
+        resp = requests.get(request_url, headers={"Accept": "application/json"}, auth=cfg.CONFLUENCE_AUTH)
+        resp.raise_for_status()
+        attachments = resp.json()['results']
+
+        if len(attachments) == 0:
+            print(f"  ... no attachments found")
+            return
+
+        print(f"Found {len(attachments)} attachments")
+
+        for attachment in attachments:
+            attachment_status = attachment['status']
+            self.delete_confluence_attachment(attachment['id'], "current")
+            self.delete_confluence_attachment(attachment['id'], "trashed")
+
+        print(f"  ... removed all attachments from page: {page_url}")
+
+
     def update_confluence_page_contents(self, page_url, new_content):
 
         old_content = self.get_confluence_page_contents(page_url)
+        page_title = old_content['title']
 
         # Get the old page content (HTML, as string)
         old_html = self._remove_nondata_attributes(old_content['body']['storage']['value'])
@@ -198,7 +226,7 @@ class Confluence:
         # If the formatted content is identical, do not proceed with update
         if prettified_old.strip() == prettified_new.strip():
             print("NO CHANGES DETECTED! Skipping update.")
-            return
+            return page_title
 
         page_id = self.get_confluence_page_id_from_url(page_url)
 
@@ -231,3 +259,5 @@ class Confluence:
 
         # also just to make sure all these pages look alike, we make it full width
         self.make_page_full_width(page_url)
+
+        return page_title
