@@ -1,4 +1,4 @@
-# SoftwareOne Marketplace — Objects Inventory Automation
+# SoftwareOne Marketplace — Objects Inventory
 
 This tool generates and maintains the visual inventory of platform objects for the SoftwareOne Marketplace Platform. It renders object views from Figma, uploads images to Confluence, and updates object pages and a summary page automatically.
 
