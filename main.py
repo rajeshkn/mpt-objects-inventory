@@ -323,6 +323,13 @@ def write_summary_page(object_schemas):
             <p style="text-align: center;"><ac:emoticon ac:emoji-fallback="✅" ac:emoji-id="2705" ac:emoji-shortname=":white_check_mark:" ac:name="blue-star"></ac:emoticon> <a href="{schema_record.figma_link}">Figma</a></p>
         '''
 
+
+    def populate_notifications_count(object_schema):
+        count = len(object_schema.email_notifications_vendor_array) + len(object_schema.email_notifications_operations_array) + len(object_schema.email_notifications_client_array)
+        if count == 0:
+            return '<p style="text-align: center;">—</p>'
+        return f'<p style="text-align: center;"><strong>{count}</strong></p>'
+
     summary_table_row_template = read_file("confluence-templates/summary-table-row.html")
 
     object_rows = []
@@ -355,6 +362,8 @@ def write_summary_page(object_schemas):
             '{{object-mobile-details-view-vendor-link}}': populate_cell(object_schema.mobile_details_view_vendor),
             '{{object-mobile-details-view-operations-link}}': populate_cell(object_schema.mobile_details_view_operations),
             '{{object-mobile-details-view-client-link}}': populate_cell(object_schema.mobile_details_view_client),
+
+            '{{object-email-notifications-count}}': populate_notifications_count(object_schema),
             
         }
 
