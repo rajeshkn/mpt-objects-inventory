@@ -135,3 +135,11 @@ def write_overview_pages(object_schemas):
         email_notifications_array.extend(object_schema.email_notifications_client_array)
 
     render_overview_page(cfg.CONFLUENCE_OVERVIEW_PAGE_URL_EMAILS, "Email Notifications", email_notifications_array)
+
+    desktop_spotlight_array = []
+    for object_schema in object_schemas:
+        desktop_spotlight_array.append(object_schema.desktop_spotlight_vendor)
+        desktop_spotlight_array.append(object_schema.desktop_spotlight_operations)
+        desktop_spotlight_array.append(object_schema.desktop_spotlight_client)
+
+    render_overview_page(cfg.CONFLUENCE_OVERVIEW_PAGE_URL_SPOTLIGHT, "Spotlight", desktop_spotlight_array)

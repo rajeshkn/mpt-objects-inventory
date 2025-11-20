@@ -87,6 +87,21 @@ def update_object_confluence_page(object_schema):
         }
     )
 
+    desktop_spotlight_table_section = populate_template(
+        roles_table_template,
+        {
+            '{{highlight-colour-column-1}}': LIGHT_BLUE,
+            '{{highlight-colour-column-2}}': LIGHT_RED,
+            '{{highlight-colour-column-3}}': LIGHT_GREEN,
+            '{{filename-column-1}}': os.path.basename(object_schema.desktop_spotlight_vendor.filename),
+            '{{filename-column-2}}': os.path.basename(object_schema.desktop_spotlight_operations.filename),
+            '{{filename-column-3}}': os.path.basename(object_schema.desktop_spotlight_client.filename),
+            '{{figma-link-column-1}}': object_schema.desktop_spotlight_vendor.figma_link,
+            '{{figma-link-column-2}}': object_schema.desktop_spotlight_operations.figma_link,
+            '{{figma-link-column-3}}': object_schema.desktop_spotlight_client.figma_link,
+        }
+    )
+
     if object_schema.desktop_settings_vendor.figma_link is not None \
         or object_schema.desktop_settings_operations.figma_link is not None \
         or object_schema.desktop_settings_client.figma_link is not None:
@@ -174,6 +189,7 @@ def update_object_confluence_page(object_schema):
             '{{email-notifications-vendor-table}}': email_notifications_vendor_table,
             '{{email-notifications-operations-table}}': email_notifications_operations_table,
             '{{email-notifications-client-table}}': email_notifications_client_table,
+            '{{desktop-spotlight-table-section}}': desktop_spotlight_table_section,
         }
     )
 

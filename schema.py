@@ -170,6 +170,10 @@ class ObjectSchema:
         self.desktop_infocard_view_operations = self._create_schema_value('desktop.infocard-view.operations')
         self.desktop_infocard_view_client = self._create_schema_value('desktop.infocard-view.client')
 
+        self.desktop_spotlight_vendor = self._create_schema_value('desktop.spotlight.vendor')
+        self.desktop_spotlight_operations = self._create_schema_value('desktop.spotlight.operations')
+        self.desktop_spotlight_client = self._create_schema_value('desktop.spotlight.client')
+
         self.desktop_settings_vendor = self._create_schema_value('desktop.settings.vendor')
         self.desktop_settings_operations = self._create_schema_value('desktop.settings.operations')
         self.desktop_settings_client = self._create_schema_value('desktop.settings.client')

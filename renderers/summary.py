@@ -69,7 +69,10 @@ def write_summary_page(object_schemas):
             '{{object-mobile-details-view-client-link}}': populate_cell(object_schema.mobile_details_view_client),
 
             '{{object-email-notifications-count}}': populate_notifications_count(object_schema),
-            
+
+            '{{object-desktop-spotlight-vendor-link}}': populate_cell(object_schema.desktop_spotlight_vendor),
+            '{{object-desktop-spotlight-operations-link}}': populate_cell(object_schema.desktop_spotlight_operations),
+            '{{object-desktop-spotlight-client-link}}': populate_cell(object_schema.desktop_spotlight_client),
         }
 
         object_row = populate_template(summary_table_row_template, placeholders)
