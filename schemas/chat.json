@@ -1,0 +1,39 @@
+{
+    "name": "Chat",
+    "confluence-page": "https://softwareone.atlassian.net/wiki/spaces/mpt/pages/6830489624/DG+Chat+object",
+    "state-diagram": "https://www.figma.com/design/rHxTpbi2gpbZ4dmVlyeY2S/Object-Diagrams?node-id=7409-370&t=iZnG58NpLRyo5MfC-1",
+    "desktop": {
+        "grid": {
+            "vendor": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=123365-66661&t=X7fEk1DrhqpKuLXJ-1",
+            "operations": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=131388-96027&t=X7fEk1DrhqpKuLXJ-1",
+            "client": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=146065-130851&t=X7fEk1DrhqpKuLXJ-1"
+        },
+        "details": {
+            "vendor": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=123512-86929&t=X7fEk1DrhqpKuLXJ-1",
+            "operations": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=131388-94671&t=X7fEk1DrhqpKuLXJ-1",
+            "client": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=123512-86929&t=X7fEk1DrhqpKuLXJ-1"
+        },
+        "settings": {
+            "vendor": null,
+            "operations": null,
+            "client": null
+        },
+        "infocard": {
+            "vendor": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=143792-114397&t=X7fEk1DrhqpKuLXJ-1",
+            "operations": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=143792-114397&t=X7fEk1DrhqpKuLXJ-1",
+            "client": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=143792-114397&t=X7fEk1DrhqpKuLXJ-1"
+        }
+    },
+    "mobile": {
+        "list": {
+            "vendor": null,
+            "operations": null,
+            "client": null
+        },
+        "details": {
+            "vendor": null,
+            "operations": null,
+            "client": null
+        }
+    }
+}
