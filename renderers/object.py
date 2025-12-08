@@ -176,10 +176,14 @@ def update_object_confluence_page(object_schema):
         object_schema.email_notifications_client_array
     )
 
+    object_name_key = object_schema.object_name.lower().replace(' ', '-')
+    state_diagram_public_image_url = f'https://softwareone.live/state-diagrams/{object_name_key}.png'
+
     page_template = populate_template(
         page_template,
         {
             '{{state-diagram}}': state_diagram,
+            '{{state-diagram-image-url}}': state_diagram_public_image_url,
             '{{desktop-grid-table-section}}': grid_view_table_section,
             '{{desktop-details-table-section}}': details_view_table_section,
             '{{desktop-infocard-table-section}}': desktop_infocard_view_table_section,
