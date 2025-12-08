@@ -16,6 +16,7 @@ from schema import ObjectSchema, SchemaRecord
 from renderers.object import update_object_confluence_page
 from renderers.summary import write_summary_page
 from renderers.overview import write_overview_pages
+from statediagrams import upload_state_diagrams
 
 cfg = Config()
 confluence = Confluence()
@@ -167,6 +168,15 @@ def main():
     print('=' * 120)
 
     write_overview_pages(object_schemas)
+
+    # Step 8: Upload State Diagrams to Cloudflare R2
+
+    print()
+    print('=' * 120)
+    print('Phase 8: Upload State Diagrams to Cloudflare R2')
+    print('=' * 120)
+
+    upload_state_diagrams(object_schemas)
 
 if __name__ == '__main__':
     main()
