@@ -19,21 +19,21 @@
             "client": null
         },
         "infocard": {
-            "vendor": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=143792-114397&t=X7fEk1DrhqpKuLXJ-1",
-            "operations": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=143792-114397&t=X7fEk1DrhqpKuLXJ-1",
-            "client": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=143792-114397&t=X7fEk1DrhqpKuLXJ-1"
+            "vendor": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=143792-114397&t=E8p12mRVsLxfI4ev-1",
+            "operations": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=143792-114397&t=E8p12mRVsLxfI4ev-1",
+            "client": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=143792-114397&t=E8p12mRVsLxfI4ev-1"
         }
     },
     "mobile": {
         "list": {
-            "vendor": null,
-            "operations": null,
-            "client": null
+            "vendor": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=2886-32133&t=tfHEs558nBUc32fb-1",
+            "operations": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=2886-32133&t=tfHEs558nBUc32fb-1",
+            "client": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=2886-32133&t=tfHEs558nBUc32fb-1"
         },
         "details": {
-            "vendor": null,
-            "operations": null,
-            "client": null
+            "vendor": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=2306-63153&t=tfHEs558nBUc32fb-1",
+            "operations": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=2306-63153&t=tfHEs558nBUc32fb-1",
+            "client": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=2306-63153&t=tfHEs558nBUc32fb-1"
         }
     }
 }
