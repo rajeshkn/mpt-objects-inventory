@@ -4,14 +4,14 @@
     "state-diagram": "https://www.figma.com/design/rHxTpbi2gpbZ4dmVlyeY2S/Object-Diagrams?node-id=44-272&t=dR2OVccKNCA0oWWg-1",
     "desktop": {
         "grid": {
-            "vendor": null,
-            "operations": null,
-            "client": null
+            "vendor": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=621-469390&t=ewAqJSmM7y66x0BG-0",
+            "operations": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=621-475253&t=ewAqJSmM7y66x0BG-0",
+            "client": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=621-469287&t=ewAqJSmM7y66x0BG-0"
         },
         "details": {
-            "vendor": null,
-            "operations": null,
-            "client": null
+            "vendor": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=621-470785&t=ewAqJSmM7y66x0BG-0",
+            "operations": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=621-475295&t=ewAqJSmM7y66x0BG-0",
+            "client": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=621-468477&t=ewAqJSmM7y66x0BG-0"
         },
         "infocard": {
             "vendor": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=58554-115186&t=NcndYOV8EJ5lvfDL-1",
@@ -21,14 +21,14 @@
     },
     "mobile": {
         "list": {
-            "vendor": null,
-            "operations": null,
+            "vendor": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=4306-43082&t=ewAqJSmM7y66x0BG-0",
+            "operations": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=5062-58481&t=ewAqJSmM7y66x0BG-0",
             "client": null
         },
         "details": {
-            "vendor": null,
-            "operations": null,
-            "client": null
+            "vendor": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=4237-42250&t=ewAqJSmM7y66x0BG-0",
+            "operations": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=4237-41647&t=ewAqJSmM7y66x0BG-0",
+            "client": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=4237-41964&t=ewAqJSmM7y66x0BG-0"
         }
     }
 }
