@@ -4,12 +4,12 @@
     "state-diagram": "https://www.figma.com/design/rHxTpbi2gpbZ4dmVlyeY2S/Object-Diagrams?node-id=726-367&t=Dj2O4JIV6NBUdifm-0",
     "desktop": {
         "grid": {
-            "vendor": null,
-            "operations": null,
-            "client": null
+            "vendor": "https://www.figma.com/design/eaGk2fopZdvQH8nbGLvVxS/Catalog?node-id=1-16129&t=ewAqJSmM7y66x0BG-0",
+            "operations": "https://www.figma.com/design/eaGk2fopZdvQH8nbGLvVxS/Catalog?node-id=1-22463&t=ewAqJSmM7y66x0BG-0",
+            "client": "https://www.figma.com/design/eaGk2fopZdvQH8nbGLvVxS/Catalog?node-id=1-23892&t=ewAqJSmM7y66x0BG-0"
         },
         "details": {
-            "vendor": null,
+            "vendor": "https://www.figma.com/design/eaGk2fopZdvQH8nbGLvVxS/Catalog?node-id=1-16017&t=ewAqJSmM7y66x0BG-0",
             "operations": null,
             "client": null
         },

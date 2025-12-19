@@ -4,14 +4,14 @@
     "state-diagram": "https://www.figma.com/design/rHxTpbi2gpbZ4dmVlyeY2S/Object-Diagrams?node-id=222-316",
     "desktop": {
         "grid": {
-            "vendor": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=1-39231",
-            "operations": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=1-37901",
-            "client": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=1-39395"
+            "vendor": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=808-293231&t=ewAqJSmM7y66x0BG-0",
+            "operations": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=808-291558&t=ewAqJSmM7y66x0BG-0",
+            "client": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=808-291150&t=ewAqJSmM7y66x0BG-0"
         },
         "details": {
-            "vendor": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=1-38931",
-            "operations": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=1-37622",
-            "client": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=1-38341"
+            "vendor": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=808-292930&t=ewAqJSmM7y66x0BG-0",
+            "operations": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=808-291279&t=ewAqJSmM7y66x0BG-0",
+            "client": "https://www.figma.com/design/sMYzX191RktVW9iseyttjO/Commerce?node-id=808-290827&t=ewAqJSmM7y66x0BG-0"
         },
         "infocard": {
             "vendor": "https://www.figma.com/design/dyiwmimDJgaav0uQW9eHgf/Marketplace-Platform?node-id=143792-114396",

@@ -22,13 +22,14 @@
     "mobile": {
         "list": {
             "vendor": null,
-            "operations": null,
-            "client": null
+            "operations": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=5087-45844&t=P9QAVsC5a3AC7YWH-1",
+            "client": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=5131-22987&t=P9QAVsC5a3AC7YWH-1"
         },
         "details": {
             "vendor": null,
-            "operations": null,
-            "client": null
+            "operations": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=5087-46081&t=P9QAVsC5a3AC7YWH-1",
+            "client": "https://www.figma.com/design/y150KEJI7hSn7KzRuG8uyu/Native-Apps?node-id=5093-21972&t=P9QAVsC5a3AC7YWH-1"
         }
     }
+
 }
